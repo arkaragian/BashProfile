@@ -7,21 +7,28 @@ alias make="gnumake"
 #alias make="$HOME/bin/mingw64/bin/mingw32-make.exe"
 
 alias remote="ssh Administrator@${REMOTEHOST}"
-alias showpath='echo -e ${PATH//:/\\n}'
+alias pathlist='echo -e ${PATH//:/\\n}'
 
-export HOME=/c/users/aris
+#MSYS is in windows. Thus we set the home path
+if [[ "$OSTYPE"=="msys" ]]
+then
+  export HOME="/c/users/$USERNAME"
+  #Neovim config folder
+  export NVCONF="$HOME/Appdata/Local/nvim"
 
-#Maybe find the user name to set the variables bellow.
-#See that OS We are in. Use cygpath to convert if needed.
-export DESKTOP="$HOME/Desktop"
-export REPOS="$HOME/source/repos"
+  #Define msys location
+  export MSYS_LOC="$HOME/bin/msys64"
 
-#Neovim config folder
-export NVCONF="$HOME/Appdata/Local/nvim"
+  #C and C++ compilers. Used by various programs.
+  export CC="$MSYS_LOC/mingw64/bin/gcc.exe"
+  export CXX="$MSYS_LOC/mingw64/bin/g++.exe"
 
-#C and C++ compilers. Used by various programs.
-export CC="$HOME/bin/mingw/mingw64/bin/gcc"
-export CXX="$HOME/bin/mingw/mingw64/bin/g++"
+  export DESKTOP="$HOME/Desktop"
+  export REPOS="$HOME/source/repos"
+fi
+
+
+
 
 export SHELL="/c/Program\ Files/Git/bin/bash.exe"
 export TEST_SHELL="/usr/bin/bash.exe"
