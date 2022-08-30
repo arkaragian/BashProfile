@@ -16,12 +16,18 @@ then
   #Neovim config folder
   export NVCONF="$HOME/Appdata/Local/nvim"
 
+
+  #CC and CXX are used by cmake to define compilers as well as other programs.
+  #We assume that clang and clang++ are in our path. In addition we define the
+  #target asn windows gnu since clang on windows tries to use msvc.
+  export CC="clang.exe -target x86_64-pc-windows-gnu"
+  export CXX="clang++.exe -target x86_64-pc-windows-gnu"
+
   #Define msys location
   export MSYS_LOC="$HOME/bin/msys64"
 
-  #C and C++ compilers. Used by various programs.
-  export CC="$MSYS_LOC/mingw64/bin/gcc.exe"
-  export CXX="$MSYS_LOC/mingw64/bin/g++.exe"
+  #export CC="$MSYS_LOC/mingw64/bin/gcc.exe"
+  #export CXX="$MSYS_LOC/mingw64/bin/g++.exe"
 
   export DESKTOP="$HOME/Desktop"
   export REPOS="$HOME/source/repos"
