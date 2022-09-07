@@ -20,8 +20,10 @@ then
   #CC and CXX are used by cmake to define compilers as well as other programs.
   #We assume that clang and clang++ are in our path. In addition we define the
   #target asn windows gnu since clang on windows tries to use msvc.
-  export CC="clang.exe -target x86_64-pc-windows-gnu"
-  export CXX="clang++.exe -target x86_64-pc-windows-gnu"
+  export CC="clang.exe"
+  export CFLAGS="-target x86_64-pc-windows-gnu"
+  export CXX="clang++.exe"
+  export CXXFLAGS="-target x86_64-pc-windows-gnu"
 
   #Define msys location
   export MSYS_LOC="$HOME/bin/msys64"
