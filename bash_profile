@@ -76,3 +76,9 @@ LS_COLORS="$LS_COLORS:*.avi=0;$LS_ORANGE:*.mp4=0;$LS_ORANGE"
 #Set MSi to green as those are executables too
 LS_COLORS="$LS_COLORS:*.msi=0;$LS_GREEN"
 export LS_COLORS
+
+
+#Source any local configuration that you might want per system
+if [ -f .bash_local]; then
+    source .bash_local
+fi
