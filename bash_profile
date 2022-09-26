@@ -62,7 +62,7 @@ LS_GREY='90'
 LS_DARKGRAY='91'
 LS_LIGHTRED='92'
 LS_LIGHTGREEN='93'
-LS_YELLOW='94'
+LS_YELLOW='93'
 LS_LIGHTBLUE='95'
 LS_TURQUOISE='96'
 LS_WHITE='97'
@@ -72,6 +72,9 @@ LS_COLORS="$LS_COLORS:*.pdf=0;93"
 
 #Set Video Files color to orange
 LS_COLORS="$LS_COLORS:*.avi=0;$LS_ORANGE:*.mp4=0;$LS_ORANGE"
+
+#Set CMake lists appear yellow
+LS_COLORS="$LS_COLORS:*CMakeLists.txt=0;$LS_YELLOW"
 
 #Set MSi to green as those are executables too
 LS_COLORS="$LS_COLORS:*.msi=0;$LS_GREEN"
