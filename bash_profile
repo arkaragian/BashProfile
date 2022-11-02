@@ -21,9 +21,9 @@ then
   #We assume that clang and clang++ are in our path. In addition we define the
   #target asn windows gnu since clang on windows tries to use msvc.
   export CC="clang.exe"
-  export CFLAGS="-target x86_64-pc-windows-gnu"
+  #export CFLAGS="-target x86_64-pc-windows-gnu"
   export CXX="clang++.exe"
-  export CXXFLAGS="-target x86_64-pc-windows-gnu"
+  #export CXXFLAGS="-target x86_64-pc-windows-gnu"
 
   #Define msys location
   export MSYS_LOC="$HOME/bin/msys64"
@@ -41,10 +41,14 @@ fi
 export SHELL="/c/Program\ Files/Git/bin/bash.exe"
 export TEST_SHELL="/usr/bin/bash.exe"
 
-# This variable defines the default cmake generator
-export CMAKE_GENERATOR="MinGW Makefiles"
 export REMOTEHOST='192.168.0.90'
 
+
+# ========== CMAKE CONFIGURATION VARIABLES ==========
+# This variable defines the default cmake generator
+export CMAKE_GENERATOR="MinGW Makefiles"
+export CMAKE_C_COMPILER="clang"
+export CMAKE_CXX_COMPILER="clang++"
 
 #ls colors configuration see https://linuxhint.com/ls_colors_bash/
 
