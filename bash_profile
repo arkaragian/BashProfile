@@ -87,6 +87,9 @@ LS_COLORS="$LS_COLORS:*CMakeLists.txt=0;$LS_YELLOW"
 
 #Set MSi to green as those are executables too
 LS_COLORS="$LS_COLORS:*.msi=0;$LS_GREEN"
+
+# Set color for Lua files
+LS_COLORS="$LS_COLORS:*.lua=0;$LS_BLUE"
 export LS_COLORS
 
 
