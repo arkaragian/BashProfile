@@ -2,6 +2,11 @@
 alias vim="nvim"
 alias vi="nvim"
 alias ls='ls --color=auto'
+
+#Correct my typos
+alias l='ls --color=auto'
+alias s='ls --color=auto'
+alias sl='ls --color=auto'
 # This requires the executable to be on our path.
 alias make="gnumake"
 #alias make="$HOME/bin/mingw64/bin/mingw32-make.exe"
