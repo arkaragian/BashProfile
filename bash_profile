@@ -7,6 +7,7 @@ alias ls='ls --color=auto'
 # Command Aliases for git
 alias gs='git status'
 alias gp='git push'
+alias gc='git commit'
 
 #Aliases for common typos
 alias l='ls --color=auto'
