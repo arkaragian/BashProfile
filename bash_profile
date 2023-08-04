@@ -1,22 +1,27 @@
-# Command Aliases
+# vim:ft=sh
+# Command Aliases for neovim
 alias vim="nvim"
 alias vi="nvim"
 alias ls='ls --color=auto'
 
-#Correct my typos
+# Command Aliases for git
+alias gs='git status'
+alias gp='git push'
+
+#Aliases for common typos
 alias l='ls --color=auto'
 alias s='ls --color=auto'
 alias sl='ls --color=auto'
-# This requires the executable to be on our path.
-alias make="gnumake"
+
+alias dc='cd'
+
 #alias make="$HOME/bin/mingw64/bin/mingw32-make.exe"
 
 alias remote="ssh Administrator@${REMOTEHOST}"
 alias pathlist='echo -e ${PATH//:/\\n}'
 
 #MSYS is in windows. Thus we set the home path
-if [[ "$OSTYPE"=="msys" ]]
-then
+if [[ "$OSTYPE"=="msys" ]] ; then
   export HOME="/c/users/$USERNAME"
   #Neovim config folder
   export NVCONF="$HOME/Appdata/Local/nvim"
@@ -38,6 +43,25 @@ then
 
   export DESKTOP="$HOME/Desktop"
   export REPOS="$HOME/source/repos"
+
+ export XDG_DATA_HOME=$LOCALAPPDATA
+ export XDG_DATA_DIRS=$APPADATA
+ export XDG_CONFIG_HOME=$LOCALAPPDATA
+ export XDG_CONFIG_DIRS=$APPDATA
+ export XDG_STATE_HOME=$LOCALAPPDATA
+ export XDG_CACHE_HOME="$LOCALAPPDATA/cache"
+ export XDG_RUNTIME_DIR=$LOCALAPPDATA
+ export XDG_DESKTOP_DIR="$USERPROFILE/Desktop"
+ export XDG_DOWNLOAD_DIR="$USERPROFILE/Downloads"
+ export XDG_DOCUMENTS_DIR="$USERPROFILE/Documents"
+ export XDG_MUSIC_DIR="$USERPROFILE/Music"
+ export XDG_PICTURES_DIR="$USERPROFILE/Pictures"
+ export XDG_VIDEOS_DIR="$USERPROFILE/Videos"
+ export XDG_TEMPLATES_DIR="$APPDATA/Microsoft/Windows/Templates"
+ export XDG_PUBLICSHARE_DIR=$PUBLIC
+
+# This requires the executable to be on our path.
+alias make="gnumake"
 fi
 
 
