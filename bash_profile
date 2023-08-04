@@ -22,9 +22,9 @@ alias pathlist='echo -e ${PATH//:/\\n}'
 
 #MSYS is in windows. Thus we set the home path
 if [[ "$OSTYPE"=="msys" ]] ; then
-  export HOME="/c/users/$USERNAME"
-  #Neovim config folder
-  export NVCONF="$HOME/Appdata/Local/nvim"
+    export HOME="/c/users/$USERNAME"
+    #Neovim config folder
+    export NVCONF="$HOME/Appdata/Local/nvim"
 
 
   #CC and CXX are used by cmake to define compilers as well as other programs.
@@ -44,24 +44,24 @@ if [[ "$OSTYPE"=="msys" ]] ; then
   export DESKTOP="$HOME/Desktop"
   export REPOS="$HOME/source/repos"
 
- export XDG_DATA_HOME=$LOCALAPPDATA
- export XDG_DATA_DIRS=$APPADATA
- export XDG_CONFIG_HOME=$LOCALAPPDATA
- export XDG_CONFIG_DIRS=$APPDATA
- export XDG_STATE_HOME=$LOCALAPPDATA
- export XDG_CACHE_HOME="$LOCALAPPDATA/cache"
- export XDG_RUNTIME_DIR=$LOCALAPPDATA
- export XDG_DESKTOP_DIR="$USERPROFILE/Desktop"
- export XDG_DOWNLOAD_DIR="$USERPROFILE/Downloads"
- export XDG_DOCUMENTS_DIR="$USERPROFILE/Documents"
- export XDG_MUSIC_DIR="$USERPROFILE/Music"
- export XDG_PICTURES_DIR="$USERPROFILE/Pictures"
- export XDG_VIDEOS_DIR="$USERPROFILE/Videos"
- export XDG_TEMPLATES_DIR="$APPDATA/Microsoft/Windows/Templates"
- export XDG_PUBLICSHARE_DIR=$PUBLIC
+  export XDG_DATA_HOME=$LOCALAPPDATA
+  export XDG_DATA_DIRS=$APPADATA
+  export XDG_CONFIG_HOME=$LOCALAPPDATA
+  export XDG_CONFIG_DIRS=$APPDATA
+  export XDG_STATE_HOME=$LOCALAPPDATA
+  export XDG_CACHE_HOME="$LOCALAPPDATA/cache"
+  export XDG_RUNTIME_DIR=$LOCALAPPDATA
+  export XDG_DESKTOP_DIR="$USERPROFILE/Desktop"
+  export XDG_DOWNLOAD_DIR="$USERPROFILE/Downloads"
+  export XDG_DOCUMENTS_DIR="$USERPROFILE/Documents"
+  export XDG_MUSIC_DIR="$USERPROFILE/Music"
+  export XDG_PICTURES_DIR="$USERPROFILE/Pictures"
+  export XDG_VIDEOS_DIR="$USERPROFILE/Videos"
+  export XDG_TEMPLATES_DIR="$APPDATA/Microsoft/Windows/Templates"
+  export XDG_PUBLICSHARE_DIR=$PUBLIC
 
-# This requires the executable to be on our path.
-alias make="gnumake"
+  # This requires the executable to be on our path.
+  alias make="gnumake"
 fi
 
 
