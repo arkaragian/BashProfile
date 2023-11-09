@@ -16,6 +16,15 @@ alias sl='ls --color=auto'
 
 alias dc='cd'
 
+#alias cwp='pwd -W | sed -e 's/\//\\/g''
+# Use double quotes for correct interpretation. from the shell.
+# we change the sed delimiter from / to #.
+# We need to escape \ twice One for the shell reading and one for the sed
+# execution. Thus \ becomes \\ in the first ecape and \\\\ in the second escape
+# (each escape adds a \ before the \ character. The name of the command is
+# "copy windows path"
+alias cwp="pwd -W | sed -e 's#/#\\\\#g' > /dev/clipboard"
+
 #alias make="$HOME/bin/mingw64/bin/mingw32-make.exe"
 
 alias remote="ssh Administrator@${REMOTEHOST}"
