@@ -127,6 +127,16 @@ LS_COLORS="$LS_COLORS:*.lua=0;$LS_BLUE"
 export LS_COLORS
 
 
+CUSTOM=$(echo $HOMESHARE | sed -e 's/\\/\//g')
+
+echo "Trying $CUSTOM/bash_config"
+
+# Source all .bash files in bash_config directory tree
+find $CUSTOM/bash_config -type f -name "*.bash" | while read bashfile; do
+    echo "Sourcing $bashfile"
+    source "$bashfile"
+done
+
 #Source any local configuration that you might want per system
 if [ -f .bash_local ]; then
     source .bash_local
