@@ -4,6 +4,8 @@ alias vim="nvim"
 alias vi="nvim"
 alias ls='ls --color=auto'
 
+alias ls22='find "X:\MILTECH\DEVELOPMENT\99-Staging" -type f'
+
 # Command Aliases for git
 alias gs='git status'
 alias gp='git push'
@@ -98,7 +100,7 @@ LS_RED='31'
 LS_GREEN='32'
 LS_ORANGE='33'
 LS_BLUE='34'
-LS_PURPLE='35'
+LS_MAGENTA='35'
 LS_CYAN='36'
 LS_GREY='90'
 
@@ -124,18 +126,23 @@ LS_COLORS="$LS_COLORS:*.msi=0;$LS_GREEN"
 
 # Set color for Lua files
 LS_COLORS="$LS_COLORS:*.lua=0;$LS_BLUE"
+
+#Set Color for csharp files
+LS_COLORS="$LS_COLORS:*.cs=0;$LS_MAGENTA"
 export LS_COLORS
 
+#Automatic sourcing defined bellow dit not work.
+source $HOMESHARE/bash_config/fzf/fzf_completion.bash
+source $HOMESHARE/bash_config/fzf/fzf_key-bindings.bash
 
-CUSTOM=$(echo $HOMESHARE | sed -e 's/\\/\//g')
 
-echo "Trying $CUSTOM/bash_config"
-
-# Source all .bash files in bash_config directory tree
-find $CUSTOM/bash_config -type f -name "*.bash" | while read bashfile; do
-    echo "Sourcing $bashfile"
-    source "$bashfile"
-done
+# CUSTOM=$(echo $HOMESHARE | sed -e 's/\\/\//g')
+#
+# # Source all .bash files in bash_config directory tree
+# find $CUSTOM/bash_config -type f -name "*.bash" | while read bashfile; do
+#     echo "Sourcing $bashfile"
+#     source "$bashfile"
+# done
 
 #Source any local configuration that you might want per system
 if [ -f .bash_local ]; then
