@@ -1,1 +1,4 @@
 #Local System Configuration
+export PR_STAGE="$HOME/Documents/Staging/Requisitions"
+
+alias ls22='find "X:\MILTECH\DEVELOPMENT\99-Staging" -type f'

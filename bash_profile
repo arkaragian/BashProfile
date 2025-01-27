@@ -18,6 +18,8 @@ alias sl='ls --color=auto'
 
 alias dc='cd'
 
+alias fnvim='nvim $(fzf)'
+
 #alias cwp='pwd -W | sed -e 's/\//\\/g''
 # Use double quotes for correct interpretation. from the shell.
 # we change the sed delimiter from / to #.
