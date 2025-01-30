@@ -133,9 +133,19 @@ LS_COLORS="$LS_COLORS:*.lua=0;$LS_BLUE"
 LS_COLORS="$LS_COLORS:*.cs=0;$LS_MAGENTA"
 export LS_COLORS
 
-#Automatic sourcing defined bellow dit not work.
-source $HOMESHARE/bash_config/fzf/fzf_completion.bash
-source $HOMESHARE/bash_config/fzf/fzf_key-bindings.bash
+#https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash
+if [ -z ${HOMESHARE+x} ]; then
+    #echo "var is unset";
+    #Automatic sourcing defined bellow dit not work.
+    source $HOME/bash_config/fzf/fzf_completion.bash
+    source $HOME/bash_config/fzf/fzf_key-bindings.bash
+else
+    #echo "var is set to '$var'";
+    #Automatic sourcing defined bellow dit not work.
+    source $HOMESHARE/bash_config/fzf/fzf_completion.bash
+    source $HOMESHARE/bash_config/fzf/fzf_key-bindings.bash
+fi
+
 
 
 # CUSTOM=$(echo $HOMESHARE | sed -e 's/\\/\//g')
