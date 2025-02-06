@@ -131,6 +131,9 @@ LS_COLORS="$LS_COLORS:*.lua=0;$LS_BLUE"
 
 #Set Color for csharp files
 LS_COLORS="$LS_COLORS:*.cs=0;$LS_MAGENTA"
+
+#Set Color for sql files
+LS_COLORS="$LS_COLORS:*.sql=0;$LS_CYAN"
 export LS_COLORS
 
 #https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash
