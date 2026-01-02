@@ -5,9 +5,10 @@
 echo "Checking home location.."
 
 if [ -z ${HOMESHARE+x} ]; then
+    echo "HOMESHARE was NOT defined.. Deployment will be done to $HOME"
     TARGET=$HOME
 else
-    echo "HOMESHARE was defined.."
+    echo "HOMESHARE was defined.. deployment will be done to $HOMESHARE"
     TARGET=$HOMESHARE
 fi
 
