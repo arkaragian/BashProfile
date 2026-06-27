@@ -2,6 +2,8 @@
 # Command Aliases for neovim
 alias vim="nvim"
 alias vi="nvim"
+alias nvmi="nvim"
+alias nmvi="nvim"
 alias ls='ls --color=auto'
 
 alias ls22='find "X:\MILTECH\DEVELOPMENT\99-Staging" -type f'
